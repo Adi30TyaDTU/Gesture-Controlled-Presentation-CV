@@ -5,14 +5,14 @@ from cvzone.HandTrackingModule import HandDetector
 
 # Variables for gesture control
 width, height = 1200, 860
-folderPath = "Presentation_1"
+folderPath = "Presentation_1"  # Replace with your own folder path or make it configurable
 
 # Camera Setup
 cap = cv2.VideoCapture(0)
 cap.set(3, width)
 cap.set(4, height)
 
-# List of Presentation Images
+# List of Presentation Images (replace with your own logic to list images)
 pathImages = sorted(os.listdir(folderPath), key=len)
 
 # Variables for gesture control
@@ -36,7 +36,7 @@ prev_x, prev_y = 0, 0
 smoothed_indexFinger = (0, 0)
 
 while True:
-    # Import Images
+    # Import Images (replace with your own logic to load images)
     success, img = cap.read()
     img = cv2.flip(img, 1)  # 0 is Vertical and 1 is Horizontal
     pathFullImage = os.path.join(folderPath, pathImages[imgNumber])
@@ -136,7 +136,7 @@ while True:
     elif key == ord('w'):
         drawingEnabled = not drawingEnabled  # Toggle drawing enabled
     elif key == ord('c'):
-        annotations = [[]]  # Clear all dArawings
+        annotations = [[]]  # Clear all drawings
         annotationNumber = 0
 
 cv2.destroyAllWindows()
