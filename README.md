@@ -32,14 +32,6 @@ To run this project locally, follow these steps:
    ```bash
    python main.py
 
-
-
-
-
-
-
-
-
 ## Gestures
 
 - **Left Hand**: Swipe left to move to the previous slide.
